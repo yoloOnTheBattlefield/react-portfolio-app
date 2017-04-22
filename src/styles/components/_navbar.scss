@@ -1,0 +1,241 @@
+$height: 60px;
+
+nav{
+  width: 100vw;
+  display: flex;
+  position: fixed;
+  margin: 0;
+  background: rgba(255,255,255,0.8);
+  z-index: 100;
+  ul{
+    margin: 0 auto;
+    display: flex;
+    list-style: none;
+    width: 80%;
+    height: $height;
+    justify-content: space-around;
+    li{
+      display: flex;
+      color: #333;
+      box-sizing: border-box;
+      border-bottom: 3px solid rgba(255,255,255,0.0);
+      transition: 0.2s;
+      &:hover{
+       border-bottom: 3px solid black;
+
+       cursor: pointer;
+      }
+      a{
+        font-family: 'Oxygen', sans-serif;
+        font-size: 16px;
+        margin: auto;
+        color: #666;
+      }
+    }
+  }
+}
+
+li.nav-item:hover a{
+  color: #000;
+}
+
+li.logo{
+  width: 40%;
+  border: 0;
+  display: flex;
+  a{
+    margin-left: 20px;
+  }
+  &:hover{
+    border: 0;
+  }
+}
+
+li.logo a{
+  font-family: 'Dancing Script', cursive;
+  font-size: 30px;
+  color: black;
+}
+
+.collapse{
+  width: 60%;
+  display: flex;
+  .nav-items{
+    width: 66.66%;
+    display: flex;
+    justify-content: space-around;
+  }
+  li.social{
+    width: 33.33%;
+    border: 0;
+    ul{
+      display: flex;
+      justify-content: space-between;
+      height: 100%;
+      width: 100%;
+    }
+  }
+}
+
+.toggle-menu{
+  display: none;
+}
+
+@media screen and (max-width: 800px){
+  li.logo{
+    width: 100%;
+    a{
+      margin-left: $height;
+    }
+  }
+  .collapse{
+    transition: 0.2s ease-in-out;
+    position: absolute;
+    // top: $height;
+    background: white;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    .nav-items{
+      width: 100%;
+      flex-direction: column;
+      height: 80%;
+      text-align: center;
+      .nav-item{
+        border: 0;
+        &:hover{
+          border: 0;
+        }
+        a{
+          font-size: 30px;
+        }
+      }
+    }
+    .social{
+      margin: 0 auto;
+      width: 80%;
+      height: 10%;
+      min-height: $height;
+    }
+  }
+
+  .collapse.close{
+    transform: translateX(100vw);
+    opacity: 0;
+
+  }
+  .collapse.open{
+    transition-delay: 0.5s;
+    transform: translateX(0vw);
+  }
+
+  .toggle-menu{
+    display: block;
+    position: absolute;
+    top: 10px;
+    right: $height;
+    width: 45px;
+    height: 30px;
+    // border: 1px solid;
+  }
+
+  .line{
+    width: 45px;
+    height: 5px;
+    background: #000;
+    position: absolute;
+    transition: 0.2s;
+  }
+
+  .line.top{
+    top: 0;
+    right: 0;
+  }
+
+  .line.middle{
+    top: 12.5px;
+  }
+
+  .line.bottom{
+    bottom: 0;
+  }
+
+  .toggle-menu.close{
+    .line.top{
+      animation: line-top-close 0.5s ease-in-out;
+      animation-fill-mode: forwards;
+    }
+  }
+  .toggle-menu.open{
+    .line.top{
+      animation: line-top-open 0.5s ease-in-out;
+      animation-fill-mode: forwards;
+    }
+    .line.middle{
+      animation: line-middle-open 0.5s ease-in-out;
+      animation-fill-mode: forwards;
+    }
+    .line.bottom{
+      animation: line-bottom-open 0.5s ease-in-out;
+      animation-fill-mode: forwards;
+    }
+  }
+
+  @keyframes line-top-open{
+    0% {width: 45px;}
+    40%  {background-color: #ff1456; width: 5px; transform: translate(0px, 0px);}
+    75%, 80%  {width: 8px; transform: translate(0px, -60px); animation-timing-function: cubic-bezier(0,1,1,1); border-radius: 50%}
+    100% {background-color: #ff1456; width: 5px; transform: translate(-6px, 25.75px); border-radius: 50%;}
+  }
+
+  @keyframes line-top-close {
+    0%, 70% {width: 0px;}
+    100%    {width: 45px; transform: translate(0, 0);}
+  }
+
+  @keyframes line-middle-open {
+    80%  {background-color: #2DFDB9; transform: translate(0px, 0px) rotate(0deg);}
+    100% {background-color: #ff1456; transform: translate(-1px, -0px) rotate(40deg);}
+  }
+
+  @keyframes line-bottom-open {
+    80%  {background-color: #2DFDB9; transform: translate(0px, 0px) rotate(0deg);}
+    100% {background-color: #ff1456; transform: translate(0px, -12px) rotate(-40deg);}
+  }
+
+
+}
+/*
+@media screen and (max-width: 375px){
+  li.logo a{
+    font-size: 30px;
+    margin-left: $height / 2;
+  }
+
+  .toggle-menu{
+    display: block;
+    position: absolute;
+    right: $height / 2;
+    width: $height;
+    height: $height;
+    background: #000;
+  }
+}
+
+@media screen and (max-width: 667px){
+  li.logo a{
+    font-size: 30px;
+    margin-left: $height / 2;
+  }
+
+  .toggle-menu{
+    display: block;
+    position: absolute;
+    right: $height / 2;
+    width: $height;
+    height: $height;
+    background: #000;
+  }
+}
+*/
