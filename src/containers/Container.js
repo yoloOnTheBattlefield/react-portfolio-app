@@ -1,16 +1,15 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const Styles = styled.section`
+const Wrapper = styled.div`
   width: 100%;
-  height: 100vh;
+  height: calc(100vh - 60px);
   padding-top: 60px;
-  background: red;
 `;
 
 const Container = (props) => {
   return (
-    <Styles>{props.children}</Styles>
+    <Wrapper>{props.children}</Wrapper>
   )
 }
 

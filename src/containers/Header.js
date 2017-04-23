@@ -1,10 +1,35 @@
 import React from 'react';
 
-import styled from 'styled-components'
+import styled from 'styled-components';
+
+
+const Title = styled.div`
+  height: 10%;
+  display: flex;
+  justify-content: center;
+  background: rgba(233,245,255,0.5);
+  padding-bottom: 10px;
+`;
+
+const Text = styled.div`
+  border-bottom: 5px solid;
+  width: 25%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  box-sizing: border-box;
+  height: 70px;
+`;
+
+const H = styled.h1`
+  font-size: 30px;
+`;
 
 const Header = (props) => {
   return(
-    <div>{props.title}</div>
+    <Title>
+      <Text><H>{props.title}</H></Text>
+    </Title>
   )
 }
 
