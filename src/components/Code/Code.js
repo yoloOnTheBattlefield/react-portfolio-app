@@ -5,19 +5,9 @@ import Container from '../../containers/Container';
 
 import {
   Row,
-  ColumnWide,
-  ColumnThird
+  FullWidth,
+  ThirdWidth
 } from '../../containers/Grid';
-
-
-
-
-//extra styles
-
-// display: flex;
-// flex-direction: column;
-// justify-content: center;
-
 
 const Code = () => {
   return(
@@ -25,12 +15,20 @@ const Code = () => {
       <Header title='Code'/>
       <Content>
         <Row>
-          <ColumnThird>UI</ColumnThird>
-          <ColumnThird>Websites</ColumnThird>
-          <ColumnThird>Apps</ColumnThird>
+          <ThirdWidth>
+            <img src={'https://unsplash.it/300/300?image=1080'} />
+          </ThirdWidth>
+          <ThirdWidth>
+            <img src={'https://unsplash.it/300/300?image=1060'} />
+          </ThirdWidth>
+          <ThirdWidth>
+            <img src={'https://unsplash.it/300/300?image=190'} />
+          </ThirdWidth>
         </Row>
         <Row>
-          <ColumnWide>Contributions</ColumnWide>
+          <FullWidth>
+            <img src={'https://unsplash.it/1200/300?image=1070'} />
+          </FullWidth>
         </Row>
       </Content>
     </Container>

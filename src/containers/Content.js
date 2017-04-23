@@ -4,8 +4,11 @@ import styled from 'styled-components';
 const ContentSection = styled.div`
   height: 90%;
   min-height: 90%;
-  display: flex;
-  flex-direction: column;
+  @media (max-width: 800px){
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
 `;
 
 const Content = (props) => {
