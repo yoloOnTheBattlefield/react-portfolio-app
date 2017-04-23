@@ -218,14 +218,14 @@ li.logo a{
 @media screen and (max-width: 667px){
   li.logo a{
     font-size: 30px;
-    margin-top: $height / 2;
-    margin-left: $height / 2;
+    margin-top: $height / 4;
+    margin-left: $height / 4;
   }
 
   .toggle-menu{
     display: block;
     position: absolute;
-    top: $height / 2;
+    top: $height / 4;
     right: $height / 2;
     width: 45px;
     height: 30px;
@@ -235,14 +235,14 @@ li.logo a{
 @media screen and (max-width: 375px){
   li.logo a{
     font-size: 30px;
-    margin-top: $height / 2;
-    margin-left: $height / 2;
+    margin-top: $height / 4;
+    margin-left: $height / 4;
   }
   .toggle-menu{
     display: block;
     position: absolute;
-    top: $height / 2;
-    right: $height / 2;
+    top: $height / 4;
+    right: $height / 4;
     width: 45px;
     height: 30px;
   }

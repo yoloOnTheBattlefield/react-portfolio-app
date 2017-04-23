@@ -1,13 +1,15 @@
 import React from 'react';
-import { Link } from 'react-router';
+
+import Header from '../../containers/Header';
+import Content from '../../containers/Content';
+import Container from '../../containers/Container';
 
 const Contact = () => {
   return(
-    <div className='container'>
-      <h1>
-        Contact Page
-      </h1>
-    </div>
+    <Container className='container'>
+      <Header title='Contact'/>
+      <Content />
+    </Container>
   )
 }
 

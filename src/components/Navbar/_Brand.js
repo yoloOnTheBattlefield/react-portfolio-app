@@ -4,7 +4,7 @@ import { Link } from 'react-router';
 const Name = (props) => {
   return(
     <li className='logo'>
-      <Link to={props.path}>{props.name}</Link>
+      <Link to={props.path}>{props.brandName}</Link>
     </li>
   )
 }

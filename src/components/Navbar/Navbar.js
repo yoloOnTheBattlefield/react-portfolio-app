@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Name from './_Name';
+import Brand from './_Brand';
 import Item from './_Item';
 import Social from './_Social';
 import Collapse from './_Collapse';
@@ -29,7 +29,7 @@ class Navbar extends React.Component {
     return(
       <nav>
         <ul>
-          <Name path='home' name='Cristian Florea'/>
+          <Brand path='home' brandName='Cristian Florea'/>
           <Collapse class={this.state.showMenu ? 'open' : 'close'}>
             <div className='nav-items'>
               <Item handleClick={this.handleClick.bind(this)} path='code' caps={true}/>
