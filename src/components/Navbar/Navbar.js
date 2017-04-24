@@ -2,9 +2,10 @@ import React from 'react';
 
 import Brand from './_Brand';
 import Item from './_Item';
-import Social from './_Social';
 import Collapse from './_Collapse';
 import ToggleMenu from './_ToggleMenu';
+
+import SocialLinks from '../SocialLinks';
 
 class Navbar extends React.Component {
   constructor(props){
@@ -36,7 +37,7 @@ class Navbar extends React.Component {
               <Item handleClick={this.handleClick.bind(this)} path='about' caps={true}/>
               <Item handleClick={this.handleClick.bind(this)} path='contact' caps={true}/>
             </div>
-            <Social links={this.props.links}/>
+            <SocialLinks links={this.props.links}/>
           </Collapse>
           <ToggleMenu
             class={this.state.showMenu ? 'open' : 'close'}  handleClick={this.handleClick.bind(this)} />

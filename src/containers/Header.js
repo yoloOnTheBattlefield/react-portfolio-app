@@ -7,7 +7,6 @@ const Title = styled.div`
   height: 10%;
   display: flex;
   justify-content: center;
-  background: rgba(233,245,255,0.5);
   padding-bottom: 10px;
 `;
 
