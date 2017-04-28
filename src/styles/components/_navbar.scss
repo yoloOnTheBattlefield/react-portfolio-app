@@ -172,9 +172,11 @@ li.logo a{
     .nav-items{
       width: 100%;
       flex-direction: column;
-      margin-top: 25%;
-      height: 60%;
+      justify-content: space-around;
+      margin-top: 5%;
+      height: 50vh;
       text-align: center;
+      margin: auto;
       .nav-item{
         border: 0;
         &:hover{

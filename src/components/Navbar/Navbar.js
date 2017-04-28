@@ -4,7 +4,6 @@ import Brand from './_Brand';
 import Item from './_Item';
 import Collapse from './_Collapse';
 import ToggleMenu from './_ToggleMenu';
-
 import SocialLinks from '../SocialLinks';
 
 class Navbar extends React.Component {

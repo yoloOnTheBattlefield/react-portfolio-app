@@ -7,19 +7,17 @@ const quote = {
 }
 
 const Paragraph = styled.blockquote`
-  max-width: 500px;
   margin: 0 auto;
   font-style: italic;
   font-size: 20px;
-  color: #666;
 `;
 const Author = styled.figcaption`
   text-align: right;
-  color: #777;
 `;
 
 const Container = styled.figure`
-  margin: 50px auto;
+  margin: 0px auto 50px auto;
+  width: 100%;
   max-width: 700px;
   display: flex;
   justify-content: space-around;

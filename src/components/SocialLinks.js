@@ -10,11 +10,16 @@ justify-content: space-around;
 width: 100%;
 max-width: 200px;
   a{
+    color: #666;
+    transition: 0.2s;
     display: flex;
     span{
       margin: auto;
       font-size: 20px;
     }
+  }
+  a:hover{
+    color: black;
   }
 `;
 

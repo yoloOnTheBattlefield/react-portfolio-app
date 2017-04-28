@@ -33,9 +33,10 @@ export const EightWidth = styled.div`
   margin: 0 20px;
 `;
 
-export const QuarteWidth = styled.div`
+export const QuarterWidth = styled.div`
   width: 33.33%;
   margin: 0 20px;
+  display: flex;
   @media (max-width: 800px) {
     width: 50%;
     margin: 0 20px;
@@ -43,7 +44,7 @@ export const QuarteWidth = styled.div`
 `;
 
 export const ThirdWidth = styled.div`
-  width: 33.33%;
+  width: 25%;
   margin: 0 20px;
   @media (max-width: 800px) {
     width: 50%;
@@ -61,4 +62,5 @@ export const ThirdWidth = styled.div`
 
 export const ImgRounded = styled.img`
   border-radius: 5px;
+  margin: auto;
 `;
