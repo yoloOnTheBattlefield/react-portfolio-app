@@ -3,20 +3,20 @@ import styled from 'styled-components';
 
 import Content from '../../containers/Content';
 import Container from '../../containers/Container';
+import Quote from './Quote';
+
 import SocialLinks from '../SocialLinks';
 import social_links from '../social_links';
-import Quote from './Quote';
 
 import {
   Row,
   FullWidth,
   EightWidth,
+  HalfWidth,
   QuarterWidth,
   ImgRounded
 } from '../../containers/Grid';
 
-const Header = styled.h1`
-`;
 
 const username = (username) => `https://api.github.com/users/${username}`;
 
@@ -46,7 +46,6 @@ class Github extends React.Component {
         <div className='heading'>
           <img src={this.state.githubData.avatar_url} className='avatar' />
           <h2 className='name'>{this.state.githubData.name}</h2>
-          <a className='btn' target='_blank' href={this.state.githubData.html_url}>+</a>
           <p>{this.state.githubData.location}</p>
         </div>
       </div>
@@ -59,20 +58,54 @@ const About = () => {
     <Container className='container'>
       <Content>
         <Row>
-          <FullWidth>
-            <Quote />
-          </FullWidth>
+          <Quote />
         </Row>
         <Row>
-          <EightWidth>
-            <Header>About Me</Header>
-            <p>Hello, My name is Cristian<br/>
-            I'm a self taught frontend developer based in London, UK.
+          <HalfWidth>
+            <h1 className='about-header'>About Me</h1>
+            <p className='about-paragraph'>
+              I am a twenty-two years old Frontend web developer interested in gaining more experience in this field of work. While I have a good understanding  of front-end development of websites applications, I consider myself more of a designer, having a background in design at the Fine Arts School of Nicolae Tonitza from Bucharest, Romania.
             </p>
-          </EightWidth>
-          <QuarterWidth>
+            <p className='about-paragraph'>
+            	Building  easy to use, aesthetically pleasing UI elements, CSS animations and JS applications is truly a passion of mine. It gives me great pleasure in seeing immediate results in the work and pieces I create. I actively seek out new technologies and stay up-to-date on industry trends and advancements.
+            </p>
+            <p className='about-paragraph'>
+            	I consider myself as a problem solver, able to quickly think and reverse engineering applications to find out how things work.
+            </p>
+
+          </HalfWidth>
+          <HalfWidth>
             <Github username='yoloOnTheBattlefield'/>
-          </QuarterWidth>
+              <div className='about-list'>
+                My key skills are:
+                <ul>
+                  <li>
+                    HTML
+                    <ul>
+                      <li>PUG</li>
+                    </ul>
+                  </li>
+                  <li>
+                    CSS
+                    <ul>
+                      <li>SASS</li>
+                      <li>Animations</li>
+                      <li>Responsive Design</li>
+                      <li>Bootstrap</li>
+                      <li>Semantic UI</li>
+                    </ul>
+                  </li>
+                  <li>
+                    Javascript
+                    <ul>
+                      <li>React</li>
+                      <li>Redux</li>
+                    </ul>
+                  </li>
+                  <li>Version control with Git and Github</li>
+                </ul>
+              </div>
+          </HalfWidth>
         </Row>
         <Row>
           <SocialLinks links={social_links} />

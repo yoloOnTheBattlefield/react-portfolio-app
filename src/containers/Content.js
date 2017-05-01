@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 const ContentSection = styled.div`
-  margin-top: 10%;
+  margin-top: 5%;
   height: 100%;
   min-height: 100%;
   @media (max-width: 800px){

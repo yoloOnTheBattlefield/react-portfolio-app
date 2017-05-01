@@ -8,15 +8,18 @@ const quote = {
 
 const Paragraph = styled.blockquote`
   margin: 0 auto;
-  font-style: italic;
   font-size: 20px;
+  color: #666;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
 `;
 const Author = styled.figcaption`
   text-align: right;
 `;
 
 const Container = styled.figure`
-  margin: 0px auto 50px auto;
+  margin: 0px auto 10px auto;
+  margin-bottom: 30px;
   width: 100%;
   max-width: 700px;
   display: flex;
