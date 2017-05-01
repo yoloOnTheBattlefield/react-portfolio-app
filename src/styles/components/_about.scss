@@ -49,3 +49,27 @@
     padding-right: 30px;
   }
 }
+
+.skills-section{
+  .skills-list{
+    ul, li > ul{
+      list-style: none;
+    }
+    .skills{
+      margin-left: 10px;
+      .skill{
+        padding: 10px;
+        transition: 0.2s;
+        ul.skill-indent{
+          .skill{
+            padding: 5px;
+            padding-left: 10px;
+            &:hover{
+              background: #678490;
+            }
+          }
+        }
+      }
+    }
+  }
+}

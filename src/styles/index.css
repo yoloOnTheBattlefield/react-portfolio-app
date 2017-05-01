@@ -310,3 +310,20 @@ li.logo a {
 
 .about-paragraph p {
   padding-right: 30px; }
+
+.skills-section .skills-list ul, .skills-section .skills-list li > ul {
+  list-style: none; }
+
+.skills-section .skills-list .skills {
+  margin-left: 10px; }
+
+.skills-section .skills-list .skills .skill {
+  padding: 10px;
+  transition: 0.2s; }
+
+.skills-section .skills-list .skills .skill ul.skill-indent .skill {
+  padding: 5px;
+  padding-left: 10px; }
+
+.skills-section .skills-list .skills .skill ul.skill-indent .skill:hover {
+  background: #678490; }
