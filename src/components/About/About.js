@@ -62,48 +62,57 @@ const About = () => {
         </Row>
         <Row>
           <HalfWidth>
-            <h1 className='about-header'>About Me</h1>
-            <p className='about-paragraph'>
-              I am a twenty-two years old Frontend web developer interested in gaining more experience in this field of work. While I have a good understanding  of front-end development of websites applications, I consider myself more of a designer, having a background in design at the Fine Arts School of Nicolae Tonitza from Bucharest, Romania.
-            </p>
-            <p className='about-paragraph'>
-            	Building  easy to use, aesthetically pleasing UI elements, CSS animations and JS applications is truly a passion of mine. It gives me great pleasure in seeing immediate results in the work and pieces I create. I actively seek out new technologies and stay up-to-date on industry trends and advancements.
-            </p>
-            <p className='about-paragraph'>
-            	I consider myself as a problem solver, able to quickly think and reverse engineering applications to find out how things work.
-            </p>
-
+            <div className='about-section'>
+              <div className='about-header'>
+                <h1>About Me</h1>
+              </div>
+              <div className='about-paragraph'>
+                <p>
+                  I am a twenty-two years old Frontend web developer interested in gaining more experience in this field of work. While I have a good understanding  of front-end development of websites applications, I consider myself more of a designer, having a background in design at the Fine Arts School of Nicolae Tonitza from Bucharest, Romania.
+                </p>
+                <p>
+                	Building  easy to use, aesthetically pleasing UI elements, CSS animations and JS applications is truly a passion of mine. It gives me great pleasure in seeing immediate results in the work and pieces I create. I actively seek out new technologies and stay up-to-date on industry trends and advancements.
+                </p>
+                <p>
+                	I consider myself as a problem solver, able to quickly think and reverse engineering applications to find out how things work.
+                </p>
+              </div>
+            </div>
           </HalfWidth>
           <HalfWidth>
             <Github username='yoloOnTheBattlefield'/>
-              <div className='about-list'>
-                My key skills are:
-                <ul>
-                  <li>
-                    HTML
-                    <ul>
-                      <li>PUG</li>
-                    </ul>
-                  </li>
-                  <li>
-                    CSS
-                    <ul>
-                      <li>SASS</li>
-                      <li>Animations</li>
-                      <li>Responsive Design</li>
-                      <li>Bootstrap</li>
-                      <li>Semantic UI</li>
-                    </ul>
-                  </li>
-                  <li>
-                    Javascript
-                    <ul>
-                      <li>React</li>
-                      <li>Redux</li>
-                    </ul>
-                  </li>
-                  <li>Version control with Git and Github</li>
-                </ul>
+              <div className='skills-section'>
+                <div>
+                  <h3>My key skills are:</h3>
+                </div>
+                <div className='skills-list'>
+                  <ul className='skills'>
+                    <li className='skill'>
+                      HTML
+                      <ul className='skill-indent'>
+                        <li>PUG</li>
+                      </ul>
+                    </li>
+                    <li className='skill'>
+                      CSS
+                      <ul className='skill-indent'>
+                        <li className='skill'>SASS</li>
+                        <li className='skill'>Animations</li>
+                        <li className='skill'>Responsive Design</li>
+                        <li className='skill'>Bootstrap</li>
+                        <li className='skill'>Semantic UI</li>
+                      </ul>
+                    </li>
+                    <li className='skill'>
+                      Javascript
+                      <ul className='skill-indent'>
+                        <li className='skill'>React</li>
+                        <li className='skill'>Redux</li>
+                      </ul>
+                    </li>
+                    <li className='skill'>Version control with Git and Github</li>
+                  </ul>
+                </div>
               </div>
           </HalfWidth>
         </Row>

@@ -307,3 +307,6 @@ li.logo a {
 .about-paragraph {
   font-size: 15px;
   margin-bottom: 20px; }
+
+.about-paragraph p {
+  padding-right: 30px; }
