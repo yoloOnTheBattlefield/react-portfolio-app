@@ -1,31 +1,40 @@
 import React from 'react';
+import Codepen from 'react-codepen';
 import Content from '../../containers/Content';
 import Container from '../../containers/Container';
 
 import {
   Row,
-  FullWidth,
-  ThirdWidth
+  FullWidth
 } from '../../containers/Grid';
+
+
 
 const Code = () => {
   return(
     <Container className='container'>
       <Content>
         <Row>
-          <ThirdWidth>
-            <img src={'https://unsplash.it/300/300?image=1080'} />
-          </ThirdWidth>
-          <ThirdWidth>
-            <img src={'https://unsplash.it/300/300?image=1060'} />
-          </ThirdWidth>
-          <ThirdWidth>
-            <img src={'https://unsplash.it/300/300?image=190'} />
-          </ThirdWidth>
-        </Row>
-        <Row>
           <FullWidth>
-            <img src={'https://unsplash.it/1200/300?image=1070'} />
+            <Codepen user='yoloonthebf' hash='EmaGmj' height='500'/>
+          </FullWidth>
+          <FullWidth>
+            <Codepen user='yoloonthebf' hash='wdgXWB' height='500'/>
+          </FullWidth>
+          <FullWidth>
+            <Codepen user='yoloonthebf' hash='aWZXQb' height='500'/>
+          </FullWidth>
+          <FullWidth>
+            <Codepen user='yoloonthebf' hash='LxNpJo' height='500'/>
+          </FullWidth>
+          <FullWidth>
+            <Codepen user='yoloonthebf' hash='jmBZYr' height='500'/>
+          </FullWidth>
+          <FullWidth>
+            <Codepen user='yoloonthebf' hash='MJLWyw' height='500'/>
+          </FullWidth>
+          <FullWidth>
+            <Codepen user='yoloonthebf' hash='KmWEpq' height='500'/>
           </FullWidth>
         </Row>
       </Content>

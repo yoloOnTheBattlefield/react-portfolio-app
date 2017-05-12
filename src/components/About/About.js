@@ -68,13 +68,13 @@ const About = () => {
               </div>
               <div className='about-paragraph'>
                 <p>
-                  I am a twenty-two years old Frontend web developer interested in gaining more experience in this field of work. While I have a good understanding  of front-end development of websites applications, I consider myself more of a designer, having a background in design at the Fine Arts School of Nicolae Tonitza from Bucharest, Romania.
+                  I am a junior Frontend web developer interested in making websites and web applications. While I have a solid understanding  of programming, I consider myself more of a designer, having a background in design at the Fine Arts School of Nicolae Tonitza from Bucharest, Romania where I have studied for 8 years.
                 </p>
                 <p>
-                	Building  easy to use, aesthetically pleasing UI elements, CSS animations and JS applications is truly a passion of mine. It gives me great pleasure in seeing immediate results in the work and pieces I create. I actively seek out new technologies and stay up-to-date on industry trends and advancements.
+                	Building  easy to use, aesthetically pleasing UI elements, eye-candy CSS animations and JS applications is truly a passion of mine. It gives me great pleasure in seeing immediate results in the work and pieces I create. I actively seek out new technologies and stay up-to-date on industry trends and advancements.
                 </p>
                 <p>
-                	I consider myself as a problem solver, able to quickly think and reverse engineering applications to find out how things work.
+                	I consider myself as a problem solver, able to quickly think and reverse engineer applications to find out how things work.
                 </p>
               </div>
             </div>
@@ -90,7 +90,7 @@ const About = () => {
                     <li className='skill'>
                       HTML
                       <ul className='skill-indent'>
-                        <li>PUG</li>
+                        <li className='skill'>PUG</li>
                       </ul>
                     </li>
                     <li className='skill'>

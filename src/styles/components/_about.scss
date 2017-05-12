@@ -47,6 +47,7 @@
   margin-bottom: 20px;
   p{
     padding-right: 30px;
+    text-align: justify;
   }
 }
 
@@ -60,12 +61,16 @@
       .skill{
         padding: 10px;
         transition: 0.2s;
+        font-size: 18px;
         ul.skill-indent{
+          display: flex;
           .skill{
             padding: 5px;
-            padding-left: 10px;
+            // padding-left: 10px;
+            font-size: 13px;
+            border-bottom: 2px solid rgba(255,255,255,0);
             &:hover{
-              background: #678490;
+              background-color: rgba(#999, 0.1);
             }
           }
         }

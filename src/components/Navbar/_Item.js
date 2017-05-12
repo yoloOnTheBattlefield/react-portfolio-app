@@ -12,7 +12,7 @@ const Item = (props) => {
 
   return(
     <li className='nav-item' onClick={props.handleClick}>
-      <Link to={props.path}>{props.caps ? caps(props.path) : firstCaps(props.path)}</Link>
+      <Link to={props.path } activeClassName='active-link' >{props.caps ? caps(props.path) : firstCaps(props.path)}</Link>
     </li>
   )
 }

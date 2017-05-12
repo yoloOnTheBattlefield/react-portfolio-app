@@ -18,6 +18,10 @@ a {
 .container {
   padding-top: 60px; }
 
+.active-link {
+  background: rgba(153, 153, 153, 0.1);
+  border-color: black; }
+
 nav {
   width: 100vw;
   display: flex;
@@ -25,33 +29,29 @@ nav {
   margin: 0;
   background: rgba(255, 255, 255, 0.8);
   z-index: 100; }
-
-nav ul {
-  margin: 0 auto;
-  display: flex;
-  list-style: none;
-  width: 80%;
-  height: 60px;
-  justify-content: space-around; }
-
-nav ul li {
-  display: flex;
-  color: #333;
-  box-sizing: border-box;
-  border-bottom: 3px solid rgba(255, 255, 255, 0);
-  transition: 0.2s; }
-
-nav ul li:hover {
-  border-bottom: 3px solid black;
-  cursor: pointer; }
-
-nav ul li a {
-  font-family: 'Raleway', sans-serif;
-  font-size: 16px;
-  margin: auto;
-  color: #666;
-  line-height: 60px;
-  align-items: center; }
+  nav ul {
+    margin: 0 auto;
+    display: flex;
+    list-style: none;
+    width: 80%;
+    height: 60px;
+    justify-content: space-around; }
+    nav ul li {
+      display: flex;
+      color: #333;
+      box-sizing: border-box;
+      border-bottom: 3px solid rgba(255, 255, 255, 0);
+      transition: 0.2s; }
+      nav ul li:hover {
+        border-bottom: 3px solid black;
+        cursor: pointer; }
+      nav ul li a {
+        font-family: 'Raleway', sans-serif;
+        font-size: 16px;
+        margin: auto;
+        color: #666;
+        line-height: 60px;
+        align-items: center; }
 
 li.nav-item:hover a {
   color: #000; }
@@ -60,12 +60,10 @@ li.logo {
   width: 40%;
   border: 0;
   display: flex; }
-
-li.logo a {
-  margin-left: 20px; }
-
-li.logo:hover {
-  border: 0; }
+  li.logo a {
+    margin-left: 20px; }
+  li.logo:hover {
+    border: 0; }
 
 li.logo a {
   font-family: 'Playfair Display', serif;
@@ -75,24 +73,20 @@ li.logo a {
 .collapse {
   width: 60%;
   display: flex; }
-
-.collapse .nav-items {
-  width: 66.66%;
-  display: flex;
-  justify-content: space-around; }
-
-.collapse li.social {
-  width: 40%;
-  border: 0; }
-
-.collapse li.social ul {
-  display: flex;
-  justify-content: space-between;
-  height: 100%;
-  width: 100%; }
-
-.collapse li.social ul a {
-  font-size: 25px; }
+  .collapse .nav-items {
+    width: 66.66%;
+    display: flex;
+    justify-content: space-around; }
+  .collapse li.social {
+    width: 40%;
+    border: 0; }
+    .collapse li.social ul {
+      display: flex;
+      justify-content: space-between;
+      height: 100%;
+      width: 100%; }
+      .collapse li.social ul a {
+        font-size: 25px; }
 
 .line {
   width: 45px;
@@ -176,8 +170,8 @@ li.logo a {
 @media screen and (max-width: 800px) {
   li.logo {
     width: 100%; }
-  li.logo a {
-    margin-left: 60px; }
+    li.logo a {
+      margin-left: 60px; }
   .collapse {
     transition: 0.2s ease-in-out;
     position: absolute;
@@ -188,27 +182,27 @@ li.logo a {
     height: 100vh;
     display: flex;
     flex-direction: column; }
-  .collapse .nav-items {
-    width: 100%;
-    flex-direction: column;
-    justify-content: space-around;
-    margin-top: 5%;
-    height: 50vh;
-    text-align: center;
-    margin: auto; }
-  .collapse .nav-items .nav-item {
-    border: 0; }
-  .collapse .nav-items .nav-item:hover {
-    border: 0; }
-  .collapse .nav-items .nav-item a {
-    font-size: 30px;
-    width: 100%;
-    height: 100%; }
-  .collapse .social {
-    margin: 0 auto;
-    width: 80%;
-    height: 10%;
-    min-height: 60px; }
+    .collapse .nav-items {
+      width: 100%;
+      flex-direction: column;
+      justify-content: space-around;
+      margin-top: 5%;
+      height: 50vh;
+      text-align: center;
+      margin: auto; }
+      .collapse .nav-items .nav-item {
+        border: 0; }
+        .collapse .nav-items .nav-item:hover {
+          border: 0; }
+        .collapse .nav-items .nav-item a {
+          font-size: 30px;
+          width: 100%;
+          height: 100%; }
+    .collapse .social {
+      margin: 0 auto;
+      width: 80%;
+      height: 10%;
+      min-height: 60px; }
   .collapse.close {
     transform: translateX(100vw);
     opacity: 0; }
@@ -272,9 +266,8 @@ li.logo a {
   flex-direction: column;
   justify-content: center;
   position: relative; }
-
-.github .heading p {
-  text-align: center; }
+  .github .heading p {
+    text-align: center; }
 
 .github .avatar,
 .github .name,
@@ -307,23 +300,24 @@ li.logo a {
 .about-paragraph {
   font-size: 15px;
   margin-bottom: 20px; }
-
-.about-paragraph p {
-  padding-right: 30px; }
+  .about-paragraph p {
+    padding-right: 30px;
+    text-align: justify; }
 
 .skills-section .skills-list ul, .skills-section .skills-list li > ul {
   list-style: none; }
 
 .skills-section .skills-list .skills {
   margin-left: 10px; }
-
-.skills-section .skills-list .skills .skill {
-  padding: 10px;
-  transition: 0.2s; }
-
-.skills-section .skills-list .skills .skill ul.skill-indent .skill {
-  padding: 5px;
-  padding-left: 10px; }
-
-.skills-section .skills-list .skills .skill ul.skill-indent .skill:hover {
-  background: #678490; }
+  .skills-section .skills-list .skills .skill {
+    padding: 10px;
+    transition: 0.2s;
+    font-size: 18px; }
+    .skills-section .skills-list .skills .skill ul.skill-indent {
+      display: flex; }
+      .skills-section .skills-list .skills .skill ul.skill-indent .skill {
+        padding: 5px;
+        font-size: 13px;
+        border-bottom: 2px solid rgba(255, 255, 255, 0); }
+        .skills-section .skills-list .skills .skill ul.skill-indent .skill:hover {
+          background-color: rgba(153, 153, 153, 0.1); }

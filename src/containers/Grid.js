@@ -7,6 +7,7 @@ export const Row = styled.div`
   max-width: 900px;
   height: 100%;
   display: flex;
+  flex-wrap: wrap;
   margin: 0 auto;
   justify-content: center;
   @media (max-width: 800px) {
@@ -24,10 +25,23 @@ export const FullWidth = styled.div`
   img{
     width: 100%;
   }
+
 `;
 
 export const HalfWidth = styled.div`
-  width: 100%;
+  width: 50%;
+  img{
+    width: 100%;
+  }
+  @media (max-width: 800px) {
+    width: 100%;
+    display: flex;
+    img{
+      width: 80%;
+      height: 100%;
+      margin: auto;
+    }
+  }
 `;
 
 export const EightWidth = styled.div`

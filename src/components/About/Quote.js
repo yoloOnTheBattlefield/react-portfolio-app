@@ -12,6 +12,7 @@ const Paragraph = styled.blockquote`
   color: #666;
   font-family: 'Open Sans', sans-serif;
   font-weight: 300;
+  text-align: justify;
 `;
 const Author = styled.figcaption`
   text-align: right;
