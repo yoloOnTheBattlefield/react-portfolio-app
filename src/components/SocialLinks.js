@@ -2,15 +2,14 @@ import React from 'react';
 import styled from 'styled-components';
 import FontAwesome from 'react-fontawesome';
 
-
-
 const List = styled.ul`
 display: flex;
 justify-content: space-around;
 width: 100%;
 max-width: 200px;
+margin: 0 auto;
   a{
-    color: #666;
+    color: white;
     transition: 0.2s;
     display: flex;
     span{
@@ -19,14 +18,12 @@ max-width: 200px;
     }
   }
   a:hover{
-    color: black;
+    color: #FBFFF1;
   }
 `;
 
 const SocialItem = (props) => {
-  return(
-    <a href={props.link} target="_blank" ><FontAwesome name={props.name} /></a>
-  )
+  return <a href={props.link} target="_blank" ><FontAwesome name={props.name} /></a>
 }
 
 const SocialLinks = (props) => {

@@ -5,7 +5,7 @@ import social_links from './social_links';
 
 const App = ({children}) => {
   return(
-    <div className='app'>
+    <div className='App'>
       <Navbar links={social_links}/>
       {children}
     </div>
