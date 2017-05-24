@@ -1,5 +1,5 @@
 import React from 'react';
-import { Grid, Container, Header, Image } from 'semantic-ui-react';
+import { Grid, Header, Image } from 'semantic-ui-react';
 import Waypoint from 'react-waypoint';
 import Chat from './Chat';
 const avatar = require('../../assets/avatar.jpg');

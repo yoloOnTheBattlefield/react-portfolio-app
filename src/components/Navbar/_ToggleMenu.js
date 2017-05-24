@@ -18,6 +18,7 @@ const Button = styled.div`
   width: 45px;
   height: 30px;
   z-index: 100;
+  cursor: pointer;
 `;
 
 class ToggleMenu extends React.Component{
@@ -33,24 +34,21 @@ class ToggleMenu extends React.Component{
     this.setState({
       toggleMenu: this.state.toggleMenu ? false : true
     })
-    console.log(this.state.toggleMenu)
   }
 
 
   render(){
     const { toggleMenu } = this.state;
+    const { active } = this.props;
 
     return (
       <Button onClick={this.handleClick}>
-        <Line bg={toggleMenu} style={{top: 0}} />
-        <Line bg={toggleMenu} style={{top: '12.5px'}} />
-        <Line bg={toggleMenu} style={{bottom: 0}} />
+        <Line bg={active || toggleMenu} style={{top: 0}} />
+        <Line bg={active || toggleMenu} style={{top: '12.5px'}} />
+        <Line bg={active || toggleMenu} style={{bottom: 0}} />
       </Button>
     )
   }
 }
 
 export default ToggleMenu;
-
-
-//style={{background: `${toggleMenu ? 'black' : 'white' }`}}

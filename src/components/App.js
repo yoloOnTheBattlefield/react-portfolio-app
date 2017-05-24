@@ -9,19 +9,17 @@ class App extends React.Component{
     super(props);
     this.state={
       showNavbar: false,
-      inView: false,
-      windowWidth: window.innerWidth /*< 860 ? false : true*/
+      inView: false
     };
     this.handleLeave = this.handleLeave.bind(this);
     this.onEnter = this.onEnter.bind(this);
-    this.onResize = this.onResize.bind(this);
   }
 
   handleLeave(){
     this.setState({
       showNavbar: true,
       inView: false
-    })
+    });
   }
 
   onEnter(){
@@ -31,19 +29,6 @@ class App extends React.Component{
     })
   }
 
-  onResize(){
-    if(this.state.inView){
-      return;
-    }
-    this.setState({
-      showNavbar: window.innerWidth < 860 ? false : true,
-    });
-  }
-
-  componentDidMount(){
-    window.addEventListener("resize", this.onResize);
-  }
-
   render(){
     const childrenWithProps = React.Children.map(this.props.children,
       (child) => React.cloneElement(child, {
@@ -51,7 +36,6 @@ class App extends React.Component{
         onEnter: this.onEnter
       })
     );
-
     return(
       <div className='App'>
         {this.state.showNavbar ? <Navbar links={social_links}/> : <AltNav />}

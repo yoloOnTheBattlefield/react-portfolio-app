@@ -9,7 +9,7 @@ width: 100%;
 max-width: 200px;
 margin: 0 auto;
   a{
-    color: white;
+    color:${props => props.color ? 'black' : 'white'} ;
     transition: 0.2s;
     display: flex;
     span{
@@ -18,7 +18,7 @@ margin: 0 auto;
     }
   }
   a:hover{
-    color: #FBFFF1;
+    color: ${props => props.color ? 'black' : 'white'};
   }
 `;
 
@@ -26,11 +26,11 @@ const SocialItem = (props) => {
   return <a href={props.link} target="_blank" ><FontAwesome name={props.name} /></a>
 }
 
-const SocialLinks = (props) => {
+const SocialLinks = ({ links, color }) => {
   return(
-    <List>
+    <List color={color} >
       {
-        props.links.map((link) => {
+        links.map((link) => {
           if(link.indexOf('https://') === 0){
             const name = link.substr(8).split('/')[0].split('.')[0];
             return <SocialItem link={link} key={name} name={name} />

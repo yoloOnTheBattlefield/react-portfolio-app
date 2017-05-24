@@ -1,5 +1,6 @@
 import React from 'react';
-import CSSTransitionGroup from 'react-transition-group/CSSTransitionGroup'
+import CSSTransitionGroup from 'react-transition-group/CSSTransitionGroup';
+import Typing from './Typing';
 
 const messages = [
   'Hey there!',
@@ -40,7 +41,8 @@ class Item extends React.Component{
     const { showMessage } = this.state;
       return (
           <li className='Chat__message' key={key}>
-            <span>{ showMessage ? message : 'loading' }</span>
+            {/* showMessage ? <span>{message}</span> : <Typing /> */}
+            <Typing />
           </li>
       )
   }
@@ -83,6 +85,7 @@ class Chat extends React.Component{
             {messages}
           </CSSTransitionGroup>
         </ul>
+        <Typing />
       </div>
     )
   }
