@@ -21,34 +21,14 @@ const Button = styled.div`
   cursor: pointer;
 `;
 
-class ToggleMenu extends React.Component{
-  constructor(props){
-    super(props);
-    this.state = {
-      toggleMenu: false
-    }
-    this.handleClick = this.handleClick.bind(this);
-  }
-
-  handleClick(){
-    this.setState({
-      toggleMenu: this.state.toggleMenu ? false : true
-    })
-  }
-
-
-  render(){
-    const { toggleMenu } = this.state;
-    const { active } = this.props;
-
+const ToggleMenu = ({ toggleMenu, active, handleShowPanel }) => {
     return (
-      <Button onClick={this.handleClick}>
+      <Button onClick={handleShowPanel}>
         <Line bg={active || toggleMenu} style={{top: 0}} />
         <Line bg={active || toggleMenu} style={{top: '12.5px'}} />
         <Line bg={active || toggleMenu} style={{bottom: 0}} />
       </Button>
     )
-  }
 }
 
 export default ToggleMenu;

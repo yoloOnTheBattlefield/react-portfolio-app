@@ -41,8 +41,7 @@ class Item extends React.Component{
     const { showMessage } = this.state;
       return (
           <li className='Chat__message' key={key}>
-            {/* showMessage ? <span>{message}</span> : <Typing /> */}
-            <Typing />
+            <span> { showMessage ?  message : 'loading' } </span>
           </li>
       )
   }
@@ -81,6 +80,7 @@ class Chat extends React.Component{
           <CSSTransitionGroup
             transitionName='Chat__animation'
             transitionEnterTimeout={100}
+            transitionLeaveTimeout={100}
           >
             {messages}
           </CSSTransitionGroup>

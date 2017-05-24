@@ -1,12 +1,29 @@
 import React from 'react';
 import { Link } from 'react-router';
+import styled from 'styled-components';
 
-const Name = (props) => {
+const Logo = styled.li`
+  width: 40%;
+  border: 0;
+  display: flex;
+  a{
+    margin-left: 20px;
+    font-family: 'Dancing Script', cursive;
+    font-size: 30px;
+    color: $color;
+  }
+  &:hover{
+    border: 0;
+  }
+`;
+
+
+const Brand = (props) => {
   return(
-    <li className='logo'>
+    <Logo>
       <Link to={props.path}>{props.brandName}</Link>
-    </li>
+    </Logo>
   )
 }
 
-export default Name;
+export default Brand;

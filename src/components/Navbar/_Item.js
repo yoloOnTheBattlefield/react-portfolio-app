@@ -1,18 +1,23 @@
 import React from 'react';
 import { Link } from 'react-router';
 
-const Item = (props) => {
+const Item = ({ path, caps }) => {
   const firstCaps = (string) => {
     return string.charAt(0).toUpperCase() + string.slice(1);
   }
 
-  const caps = (string) => {
+  const capsL = (string) => {
     return string.toUpperCase();
   }
 
   return(
-    <li className='nav-item' onClick={props.handleClick}>
-      <Link to={props.path } activeClassName='active-link' >{props.caps ? caps(props.path) : firstCaps(props.path)}</Link>
+    <li className='nav-item'>
+      <Link
+        activeClassName='active-link'
+        to={ path }
+      >
+        { caps ? capsL(path) : firstCaps(path)}
+      </Link>
     </li>
   )
 }

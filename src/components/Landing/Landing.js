@@ -2,10 +2,10 @@ import React from 'react';
 import Hero from './Hero';
 import Content from './Content';
 
-const Landing = ({ handleLeave, onEnter }) => {
+const Landing = ({ onLeave, onEnter }) => {
   return (
   <div className='Landing'>
-    <Hero onEnter={onEnter} handleLeave={handleLeave} />
+    <Hero onEnter={onEnter} onLeave={onLeave} />
     <Content />
   </div>
   )

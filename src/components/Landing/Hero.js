@@ -9,7 +9,7 @@ const social_links = [
   'http://codepen.io/yoloonthebf/',
 ];
 
-const Hero = ({ handleLeave, onEnter }) => {
+const Hero = ({ onLeave, onEnter }) => {
 
 
   return (
@@ -19,14 +19,14 @@ const Hero = ({ handleLeave, onEnter }) => {
         <h1>Cristian Florea</h1>
         <h2>DESIGNER WITH A PASSION FOR TECHNOLOGY</h2>
         <div className='Landing__social'>
-          <SocialLinks links={social_links}/>
+          <SocialLinks large links={social_links}/>
         </div>
         <div className='Landing__button' >
           <button className='button'>Let's work together</button>
           <Icon className='Landing__icon' name='angle double down' />
         </div>
       </div>
-      <Waypoint onEnter={onEnter} onLeave={handleLeave} />
+      <Waypoint onEnter={onEnter} onLeave={onLeave} />
     </div>
   )
 }
