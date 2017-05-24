@@ -1,5 +1,5 @@
 import React from 'react';
-import { TransitionMotion } from 'react-motion';
+import CSSTransitionGroup from 'react-transition-group/CSSTransitionGroup'
 
 const messages = [
   'Hey there!',
@@ -10,8 +10,40 @@ const messages = [
   'If you have any questions you can contact me here'
 ];
 
-const Item = ({key, message}) => {
-  return <li className='Chat__message' key={key}><span>{message}</span></li>
+
+class Item extends React.Component{
+  constructor(props){
+    super(props);
+    this.state = {
+      showMessage: false
+    }
+  }
+
+  timeout(){
+    if(!this.state.showMessage){
+      setTimeout(() => {
+        this.setState({
+          showMessage: true
+        })
+      }, 1000)
+    }
+  }
+
+  componentDidMount(){
+    this.timeout();
+  }
+
+
+
+  render(){
+    const { key, message } = this.props;
+    const { showMessage } = this.state;
+      return (
+          <li className='Chat__message' key={key}>
+            <span>{ showMessage ? message : 'loading' }</span>
+          </li>
+      )
+  }
 }
 
 class Chat extends React.Component{
@@ -27,31 +59,29 @@ class Chat extends React.Component{
       setTimeout(() => {
         this.setState({
           messages: this.state.messages.concat(message)
-        })
+        });
       }, 2000 * index)
     });
   }
 
-  willEnter(){
-    return{
-      width: '100%'
-    }
-  }
 
   componentDidMount(){
     this.addMessages(messages);
   }
 
   render(){
-    const { messages } = this.state;
+    const messages = this.state.messages.map((message, key) => {
+      return <Item key={message} message={message} />
+    });
     return(
       <div className='Content__chat'>
         <ul className='Chat__list'>
-          {
-            messages.map((message, key) => {
-              return <Item key={key} message={message} />
-            })
-          }
+          <CSSTransitionGroup
+            transitionName='Chat__animation'
+            transitionEnterTimeout={100}
+          >
+            {messages}
+          </CSSTransitionGroup>
         </ul>
       </div>
     )

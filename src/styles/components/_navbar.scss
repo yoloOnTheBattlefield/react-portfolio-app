@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Dancing+Script');
 
 $height: 60px;
+$color: black;
 
 nav{
   width: 100vw;
@@ -8,6 +9,7 @@ nav{
   position: fixed;
   margin: 0;
   z-index: 100;
+  background: rgba(white, 0.8);
   ul{
     margin: 0 auto;
     display: flex;
@@ -17,211 +19,145 @@ nav{
     justify-content: space-around;
     li{
       display: flex;
-      color: white;
+      color: $color;
       box-sizing: border-box;
       border-bottom: 3px solid rgba(255,255,255,0.0);
       transition: 0.2s;
       &:hover{
-       border-bottom: 3px solid white;
+       border-bottom: 3px solid $color;
        cursor: pointer;
       }
       a{
         font-family: 'Raleway', sans-serif;
         font-size: 16px;
         margin: auto;
-        color: white;
+        color: $color;
         line-height: 60px;
         align-items: center;
         &:hover{
-          color: white;
+          color: $color;
         }
       }
     }
   }
 }
 
-
+//Cristian florea left tag styles
 li.logo{
   width: 40%;
   border: 0;
   display: flex;
   a{
     margin-left: 20px;
+    font-family: 'Dancing Script', cursive;
+    font-size: 30px;
+    color: $color;
   }
   &:hover{
     border: 0;
   }
 }
 
-li.logo a{
-  font-family: 'Dancing Script', cursive;
-  font-size: 30px;
-  color: white;
-}
 
-.collapse{
-  width: 60%;
+.nav-items{
+  width: 66.66%;
   display: flex;
-  .nav-items{
-    width: 66.66%;
-    display: flex;
-    justify-content: space-around;
-  }
-  li.social{
-    width: 40%;
-    border: 0;
-    ul{
-      display: flex;
-      justify-content: space-between;
-      height: 100%;
-      width: 100%;
-      a{
-        font-size: 25px;
-      }
-    }
-  }
+  justify-content: space-around;
 }
-
-.line{
-  width: 45px;
-  height: 5px;
-  background: white;
-  position: absolute;
-  transition: 0.2s;
-  border-radius: 5px;
-}
-
-.line.top{
-  top: 0;
-  right: 0;
-}
-
-.line.middle{
-  top: 12.5px;
-}
-
-.line.bottom{
-  bottom: 0;
-}
-
-.toggle-menu{
-  display: none;
-}
-
-.toggle-menu.open{
-  .line{
-    background: black;
-  }
-}
-
-@media screen and (max-width: 800px){
-  li.logo{
-    width: 100%;
-    a{
-      margin-left: $height;
-    }
-  }
-  .collapse{
-    transition: 0.2s ease-in-out;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background: white;
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    .nav-items{
-      width: 100%;
-      flex-direction: column;
-      justify-content: space-around;
-      margin-top: 5%;
-      height: 50vh;
-      text-align: center;
-      margin: auto;
-      .nav-item{
-        border: 0;
-        &:hover{
-          border: 0;
-        }
-        a{
-          font-size: 30px;
-          width: 100%;
-          height: 100%;
-        }
-      }
-    }
-    .social{
-      margin: 0 auto;
-      width: 80%;
-      height: 10%;
-      min-height: $height;
-    }
-  }
-
-  .collapse.close{
-    transform: translateX(100vw);
-    opacity: 0;
-
-  }
-  .collapse.open{
-    transform: translateX(0vw);
-    opacity: 1;
-  }
-
-  .toggle-menu{
-    display: block;
-    position: absolute;
-    top: 10px;
-    right: $height;
-    width: 45px;
-    height: 30px;
-  }
-}
-
-@media screen and (max-width: 667px){
-  li.logo a{
-    font-size: 30px;
-    margin: 0 auto;
-  }
-
-  .toggle-menu{
-    display: block;
-    position: absolute;
-    top: $height / 4;
-    right: $height;
-    width: 45px;
-    height: 30px;
-  }
-}
-
-@media screen and (max-width: 414px){
-  li.logo a{
-    font-size: 30px;
-    margin: 0 auto;
-  }
-  .toggle-menu{
-    display: block;
-    position: absolute;
-    top: $height / 4;
-    right: $height / 2;
-    width: 45px;
-    height: 30px;
-  }
-}
+// li.social{
+//   width: 40%;
+//   border: 0;
+//   ul{
+//     display: flex;
+//     justify-content: space-between;
+//     height: 100%;
+//     width: 100%;
+//     a{
+//       color: $color;
+//       font-size: 25px;
+//       span{
+//         color: inherit;
+//       }
+//     }
+//   }
+// }
 
 
-@media screen and (max-width: 375px){
-  li.logo a{
-    font-size: 30px;
-    margin: 0 auto;
-  }
-  .toggle-menu{
-    display: block;
-    position: absolute;
-    top: $height / 4;
-    right: $height / 4;
-    width: 45px;
-    height: 30px;
-  }
-}
+//
+// @media screen and (max-width: 800px){
+//   li.logo{
+//     width: 100%;
+//     a{
+//       margin-left: $height;
+//     }
+//   }
+//   .collapse{
+//     transition: 0.2s ease-in-out;
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     background: white;
+//     width: 100%;
+//     height: 100vh;
+//     display: flex;
+//     flex-direction: column;
+//     .nav-items{
+//       width: 100%;
+//       flex-direction: column;
+//       justify-content: space-around;
+//       margin-top: 5%;
+//       height: 50vh;
+//       text-align: center;
+//       margin: auto;
+//       .nav-item{
+//         border: 0;
+//         &:hover{
+//           border: 0;
+//         }
+//         a{
+//           font-size: 30px;
+//           width: 100%;
+//           height: 100%;
+//         }
+//       }
+//     }
+//     .social{
+//       margin: 0 auto;
+//       width: 80%;
+//       height: 10%;
+//       min-height: $height;
+//     }
+//   }
+//
+//   .collapse.close{
+//     transform: translateX(100vw);
+//     opacity: 1;
+//
+//   }
+//   .collapse.open{
+//     transform: translateX(0vw);
+//     opacity: 1;
+//   }
+// }
+//
+// @media screen and (max-width: 667px){
+//   li.logo a{
+//     font-size: 30px;
+//     margin: 0 auto;
+//   }
+// }
+//
+// @media screen and (max-width: 414px){
+//   li.logo a{
+//     font-size: 30px;
+//     margin: 0 auto;
+//   }
+// }
+//
+//
+// @media screen and (max-width: 375px){
+//   li.logo a{
+//     font-size: 30px;
+//     margin: 0 auto;
+//   }
+// }

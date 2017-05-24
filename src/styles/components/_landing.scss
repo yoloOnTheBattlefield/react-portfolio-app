@@ -47,6 +47,7 @@ $black: #0D090A;
   max-width: 800px;
   margin: 0 auto;
   font-size: $font / 2;
+  font-weight: 200;
   color: $color;
   text-shadow: 0px 0px 10px rgba(black, 0.8);
 }
@@ -131,11 +132,25 @@ $black: #0D090A;
 .Chat__message{
   text-align: left;
   margin-bottom: 20px;
+  transition: 0.5s;
 }
+
 .Chat__message span{
   background: #76BED0;
   border-radius: 20px;
   color: white;
   text-align: left;
   padding: 10px 10px;
+}
+
+.Chat__animation-enter{
+  opacity: 0.01;
+  width: 0;
+  transform-origin: left;
+}
+
+.Chat__animation-enter.Chat__message-enter-active {
+  opacity: 1;
+  width: auto;
+  transition: all .1s ease-in;
 }

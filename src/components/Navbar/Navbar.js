@@ -26,18 +26,13 @@ class Navbar extends React.Component {
       <nav>
         <ul>
           <Brand path='home' brandName='Cristian Florea' />
-          <Collapse class={this.state.showMenu ? 'open' : 'close'}>
             <div className='nav-items'>
               <Item handleClick={this.handleClick} path='code' caps={true}/>
               <Item handleClick={this.handleClick} path='about' caps={true}/>
               <Item handleClick={this.handleClick} path='contact' caps={true}/>
             </div>
-            {/*<SocialLinks links={this.props.links} />*/}
-          </Collapse>
-          <ToggleMenu
-            class={this.state.showMenu ? 'open' : 'close'}
-            handleClick={this.handleClick.bind(this)}
-          />
+            <SocialLinks links={this.props.links} />
+
         </ul>
       </nav>
     )
