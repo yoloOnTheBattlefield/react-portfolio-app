@@ -8,10 +8,10 @@ const Items = styled.div`
   justify-content: space-around;
 `;
 
-const ItemList = () => {
+const ItemList = ({ selected }) => {
   return (
     <Items>
-      <Item path='code' caps />
+      <Item selected={selected} path='code' caps />
       <Item path='about' caps />
       <Item path='contact' caps />
     </Items>

@@ -17,7 +17,7 @@ const Hero = ({ onLeave, onEnter }) => {
       <div className='Landing__hero' />
       <div className='Landing__text' >
         <h1>Cristian Florea</h1>
-        <h2>DESIGNER WITH A PASSION FOR TECHNOLOGY</h2>
+        <h2>DEVELOPER WITH A PASSION FOR DESIGN</h2>
         <div className='Landing__social'>
           <SocialLinks large links={social_links}/>
         </div>

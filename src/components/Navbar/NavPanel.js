@@ -10,11 +10,11 @@ const Panel = styled.div`
   z-index: 99;
 `;
 
-const NavPanel = () => {
+const NavPanel = ({ selected }) => {
   const height = window.innerHeight;
   return (
     <Panel height={height} >
-      <ItemList />
+      <ItemList selected={selected} />
     </Panel>
   )
 }

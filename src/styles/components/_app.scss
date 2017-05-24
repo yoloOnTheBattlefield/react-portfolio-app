@@ -1,3 +1,5 @@
+$black: #0D090A;
+
 body{
   font-family: 'Raleway', sans-serif;
   width: 100%;
@@ -9,6 +11,8 @@ body{
   min-height: 100vh;
   box-sizing: border-box;
   height: 2000px;
+  background: $black;
+  color: white;
 }
 
 ul{

@@ -10,7 +10,6 @@ class App extends React.Component{
     super(props);
     this.state={
       showNavbar: false,
-      // mobileNav: false,
       showPanel: false,
       inView: false,
       toggleButton: false
@@ -40,6 +39,10 @@ class App extends React.Component{
     })
   }
 
+  selected(){
+    console.log('selected')
+  }
+
   render(){
     const childrenWithProps = React.Children.map(this.props.children,
       (child) => React.cloneElement(child, {
@@ -57,7 +60,7 @@ class App extends React.Component{
               handleShowPanel={this.handleShowPanel}
             /> : <AltNav toggleMenu={showPanel} handleShowPanel={this.handleShowPanel} />
         }
-        { showPanel ? <NavPanel /> : childrenWithProps }
+        { showPanel ? <NavPanel selected={this.selected} /> : childrenWithProps }
       </div>
     )
   }

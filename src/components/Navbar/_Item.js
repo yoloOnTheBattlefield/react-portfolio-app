@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router';
 
-const Item = ({ path, caps }) => {
+const Item = ({ path, caps, selected }) => {
   const firstCaps = (string) => {
     return string.charAt(0).toUpperCase() + string.slice(1);
   }
@@ -11,9 +11,10 @@ const Item = ({ path, caps }) => {
   }
 
   return(
-    <li className='nav-item'>
+    <li className='nav-item' >
       <Link
         activeClassName='active-link'
+        onClick={() => selected}
         to={ path }
       >
         { caps ? capsL(path) : firstCaps(path)}

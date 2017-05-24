@@ -9,7 +9,9 @@ body {
   width: 100vw;
   min-height: 100vh;
   box-sizing: border-box;
-  height: 2000px; }
+  height: 2000px;
+  background: #0D090A;
+  color: white; }
 
 ul {
   padding: 0;
@@ -39,7 +41,7 @@ nav {
   position: fixed;
   margin: 0;
   z-index: 100;
-  background: rgba(255, 255, 255, 0.8); }
+  background: #0D090A; }
 
 nav ul {
   margin: 0 auto;
@@ -51,25 +53,25 @@ nav ul {
 
 nav ul li {
   display: flex;
-  color: black;
+  color: white;
   box-sizing: border-box;
   border-bottom: 3px solid rgba(255, 255, 255, 0);
   transition: 0.2s; }
 
 nav ul li:hover {
-  border-bottom: 3px solid black;
+  border-bottom: 3px solid white;
   cursor: pointer; }
 
 nav ul li a {
   font-family: 'Raleway', sans-serif;
   font-size: 16px;
   margin: auto;
-  color: black;
+  color: white;
   line-height: 60px;
   align-items: center; }
 
 nav ul li a:hover {
-  color: black; }
+  color: white; }
 
 .Hero {
   position: relative; }
@@ -95,7 +97,7 @@ nav ul li a:hover {
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(#0d090a 0%, transparent, rgba(13, 9, 10, 0.7) 70%, rgba(13, 9, 10, 0.9) 100%);
+  background: linear-gradient(#0d090a 0%, transparent, rgba(13, 9, 10, 0.7) 70%, #0d090a 100%);
   display: flex;
   flex-direction: column;
   justify-content: center; }
@@ -181,7 +183,7 @@ nav ul li a:hover {
   transition: 0.5s; }
 
 .Chat__message span {
-  background: #76BED0;
+  background: red;
   border-radius: 20px;
   color: white;
   text-align: left;

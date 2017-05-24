@@ -40,7 +40,7 @@ class Navbar extends React.Component {
             <ul>
               <Brand path='home' brandName='Cristian Florea' />
               <ItemList />
-              <SocialLinks color links={this.props.links} />
+              <SocialLinks  links={this.props.links} />
             </ul>
         }
       </nav>
