@@ -42,36 +42,31 @@ nav {
   margin: 0;
   z-index: 100;
   background: #0D090A; }
-
-nav ul {
-  margin: 0 auto;
-  display: flex;
-  list-style: none;
-  width: 80%;
-  height: 60px;
-  justify-content: space-around; }
-
-nav ul li {
-  display: flex;
-  color: white;
-  box-sizing: border-box;
-  border-bottom: 3px solid rgba(255, 255, 255, 0);
-  transition: 0.2s; }
-
-nav ul li:hover {
-  border-bottom: 3px solid white;
-  cursor: pointer; }
-
-nav ul li a {
-  font-family: 'Raleway', sans-serif;
-  font-size: 16px;
-  margin: auto;
-  color: white;
-  line-height: 60px;
-  align-items: center; }
-
-nav ul li a:hover {
-  color: white; }
+  nav ul {
+    margin: 0 auto;
+    display: flex;
+    list-style: none;
+    width: 80%;
+    height: 60px;
+    justify-content: space-around; }
+    nav ul li {
+      display: flex;
+      color: white;
+      box-sizing: border-box;
+      border-bottom: 3px solid rgba(255, 255, 255, 0);
+      transition: 0.2s; }
+      nav ul li:hover {
+        border-bottom: 3px solid white;
+        cursor: pointer; }
+      nav ul li a {
+        font-family: 'Raleway', sans-serif;
+        font-size: 16px;
+        margin: auto;
+        color: white;
+        line-height: 60px;
+        align-items: center; }
+        nav ul li a:hover {
+          color: white; }
 
 .Hero {
   position: relative; }
@@ -123,29 +118,25 @@ nav ul li a:hover {
   display: flex;
   flex-direction: column;
   justify-content: space-between; }
-
-.Landing__button button {
-  margin: 50px auto;
-  background: rgba(255, 255, 255, 0);
-  border: 1px solid #EFE9F4;
-  color: #EFE9F4;
-  transition: 0.2s; }
-
-.Landing__button button:hover {
-  border-color: #4B88A2; }
-
-.Landing__button .Landing__icon {
-  color: #EFE9F4;
-  font-size: 30px;
-  animation: icon 2s infinite ease-in-out;
-  margin: 0 auto;
-  cursor: pointer; }
+  .Landing__button button {
+    margin: 50px auto;
+    background: rgba(255, 255, 255, 0);
+    border: 1px solid #EFE9F4;
+    color: #EFE9F4;
+    transition: 0.2s; }
+    .Landing__button button:hover {
+      border-color: #4B88A2; }
+  .Landing__button .Landing__icon {
+    color: #EFE9F4;
+    font-size: 30px;
+    animation: icon 2s infinite ease-in-out;
+    margin: 0 auto;
+    cursor: pointer; }
 
 .Landing__social {
   margin-top: 20px; }
-
-.Landing__social a span {
-  font-size: 30px; }
+  .Landing__social a span {
+    font-size: 30px; }
 
 @keyframes icon {
   0% {

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Grid, Image } from 'semantic-ui-react';
 import { Header, Title, Code } from './Code.style';
+import Waypoint from 'react-waypoint';
 
 const signup = require('../../assets/work/signup.png')
 const creditcard = require('../../assets/work/creditcard.png')
@@ -13,44 +14,63 @@ const animation = require('../../assets/work/animation.png')
 const light = require('../../assets/work/light.png')
 const clock = require('../../assets/work/clock.png')
 
-export default () => {
-  return(
-    <Code>
-      <Header>Code</Header>
-      <Title>React</Title>
-      <Grid columns={2} stackable>
-        <Grid.Row>
-          <Grid.Column>
-            <Image src={signup} />
-          </Grid.Column>
-          <Grid.Column>
-            <Image src={creditcard} />
-          </Grid.Column>
-        </Grid.Row>
-      </Grid>
-      <Grid columns={3} stackable>
-        <Grid.Column>
-          <Image src={navbar} />
-        </Grid.Column>
-        <Grid.Column>
-          <Image src={buttons} />
-        </Grid.Column>
-        <Grid.Column>
-          <Image src={form} />
-        </Grid.Column>
-      </Grid>
-      <Title>CSS Studies</Title>
+export default class extends React.Component{
+  constructor(props){
+    super(props);
+    this.state={
+      sticky: false
+    }
+  }
+  onEnter(){
+    console.log('Code Entered');
+  }
+  onLeave(){
+    console.log('Code Left');
+  }
+  render(){
+    return(
+      <Code>
+        <Waypoint
+
+          onLeave={this.onLeave}
+          topOffset={60}
+        />
+      {/*<Header sticky={this.state.sticky}>Code</Header>*/}
+        <Title>React</Title>
+        <Grid columns={2} stackable>
+          <Grid.Row>
+            <Grid.Column>
+              <Image src={signup} />
+            </Grid.Column>
+            <Grid.Column>
+              <Image src={creditcard} />
+            </Grid.Column>
+          </Grid.Row>
+        </Grid>
         <Grid columns={3} stackable>
           <Grid.Column>
-            <Image src={animation} />
+            <Image src={navbar} />
           </Grid.Column>
           <Grid.Column>
-            <Image src={light} />
+            <Image src={buttons} />
           </Grid.Column>
           <Grid.Column>
-            <Image src={clock} />
+            <Image src={form} />
           </Grid.Column>
         </Grid>
-    </Code>
-  )
+        <Title>CSS Studies</Title>
+          <Grid columns={3} stackable>
+            <Grid.Column>
+              <Image src={animation} />
+            </Grid.Column>
+            <Grid.Column>
+              <Image src={light} />
+            </Grid.Column>
+            <Grid.Column>
+              <Image src={clock} />
+            </Grid.Column>
+          </Grid>
+      </Code>
+    )
+  }
 }

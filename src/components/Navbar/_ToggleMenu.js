@@ -4,7 +4,7 @@ import styled from 'styled-components';
 const Line = styled.div`
   width: 45px;
   height: 5px;
-  background: ${props => props.bg ? 'black' : 'white' }
+  background: white
   position: absolute;
   transition: 0.2s;
   border-radius: 5px;
@@ -16,7 +16,7 @@ const Button = styled.div`
   top: 45px;
   right: 45px;
   width: 45px;
-  height: 30px;
+  height: 45px;
   z-index: 100;
   cursor: pointer;
 `;
@@ -24,9 +24,9 @@ const Button = styled.div`
 const ToggleMenu = ({ toggleMenu, active, handleShowPanel }) => {
     return (
       <Button onClick={handleShowPanel}>
-        <Line bg={active || toggleMenu} style={{top: 0}} />
-        <Line bg={active || toggleMenu} style={{top: '12.5px'}} />
-        <Line bg={active || toggleMenu} style={{bottom: 0}} />
+        <Line bg={active || toggleMenu} style={{top: 5}} />
+        <Line bg={active || toggleMenu} style={{top: '20px'}} />
+        <Line bg={active || toggleMenu} style={{bottom: 5}} />
       </Button>
     )
 }

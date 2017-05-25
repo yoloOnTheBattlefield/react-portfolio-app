@@ -15,7 +15,10 @@ export const Header = styled.h1`
   transform: rotate(-90deg);
   color: ${red};
   position: absolute;
-  left: -45px;
+  height: 50px;
+  width: 150px;
+  text-align: center;
+  left: -10%;
 `;
 
 export const Title = styled.h2`

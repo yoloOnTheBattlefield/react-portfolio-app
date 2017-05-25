@@ -34,6 +34,7 @@ class App extends React.Component{
   }
 
   handleShowPanel(){
+    console.log('toggle menu is clicked', this.state.showPanel);
     this.setState({
       showPanel: this.state.showPanel ? false : true
     })
@@ -44,6 +45,7 @@ class App extends React.Component{
   }
 
   render(){
+    console.log('state was rerender', this.state.showPanel);
     const childrenWithProps = React.Children.map(this.props.children,
       (child) => React.cloneElement(child, {
         onLeave: this.onLeave,
@@ -58,9 +60,9 @@ class App extends React.Component{
             <Navbar
               links={social_links}
               handleShowPanel={this.handleShowPanel}
-            /> : <AltNav toggleMenu={showPanel} handleShowPanel={this.handleShowPanel} />
+            /> : <div></div>
         }
-        { showPanel ? <NavPanel selected={this.selected} /> : childrenWithProps }
+        { childrenWithProps }
       </div>
     )
   }
