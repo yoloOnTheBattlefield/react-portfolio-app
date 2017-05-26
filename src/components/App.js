@@ -1,7 +1,5 @@
 import React from 'react';
 import Navbar from './Navbar/Navbar';
-import AltNav from './Navbar/AltNav';
-import NavPanel from './Navbar/NavPanel';
 
 import social_links from './social_links';
 
@@ -10,58 +8,59 @@ class App extends React.Component{
     super(props);
     this.state={
       showNavbar: false,
-      showPanel: false,
       inView: false,
-      toggleButton: false
+      toggleButton: false,
+      mobileNav: 860
     };
-    this.onLeave = this.onLeave.bind(this);
-    this.onEnter = this.onEnter.bind(this);
-    this.handleShowPanel = this.handleShowPanel.bind(this);
+    this.onHeroLeave = this.onHeroLeave.bind(this);
+    this.onHeroEnter = this.onHeroEnter.bind(this);
+    this.mobileNav = this.mobileNav.bind(this);
   }
 
-  onLeave(){
+  onHeroLeave(){
     this.setState({
       showNavbar: true,
       inView: false,
     });
   }
 
-  onEnter(){
+  onHeroEnter(){
     this.setState({
       showNavbar: false,
       inView: true,
     });
   }
 
-  handleShowPanel(){
-    console.log('toggle menu is clicked', this.state.showPanel);
-    this.setState({
-      showPanel: this.state.showPanel ? false : true
-    })
-  }
 
   selected(){
-    console.log('selected')
+    console.log('selected');
+  }
+
+  mobileNav(){
+    this.setState({
+      mobileNav: window.innerWidth < 860 ? true : false
+    });
+  }
+  componentDidMount(){
+    this.mobileNav();
+    window.addEventListener('resize', this.mobileNav);
   }
 
   render(){
-    console.log('state was rerender', this.state.showPanel);
     const childrenWithProps = React.Children.map(this.props.children,
       (child) => React.cloneElement(child, {
-        onLeave: this.onLeave,
-        onEnter: this.onEnter
+        onHeroLeave: this.onHeroLeave,
+        onHeroEnter: this.onHeroEnter,
+        arrowRunning: this.state.showNavbar
       })
     );
-    const { showPanel } = this.state;
     return(
       <div className='App'>
-        {
-          this.state.showNavbar ?
-            <Navbar
-              links={social_links}
-              handleShowPanel={this.handleShowPanel}
-            /> : <div></div>
-        }
+        <Navbar
+          links={social_links}
+          show={this.state.showNavbar}
+          mobileNav={this.state.mobileNav}
+        />
         { childrenWithProps }
       </div>
     )

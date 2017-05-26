@@ -5,45 +5,42 @@ import ItemList from './ItemList';
 import ToggleMenu from './_ToggleMenu';
 import SocialLinks from '../SocialLinks';
 
+import { Nav } from './Navbar.styles';
+
 class Navbar extends React.Component {
   constructor(props){
     super(props);
     this.state = {
-      mobileNav: false,
-      mounted: false
+      showPanel: false,
     }
-    this.mobileNav = this.mobileNav.bind(this);
+
+    this.handleShowPanel = this.handleShowPanel.bind(this);
   }
 
-  mobileNav(){
-    if(this._mounted){
-      this.setState({
-        mounted: true,
-        mobileNav: window.innerWidth < 860 ? true : false
-      })
-    }
+
+
+  handleShowPanel(){
+    this.setState({
+      showPanel: this.state.showPanel ? false : true
+    });
   }
 
-  componentDidMount(){
-    this._mounted = true;
-    this.mobileNav();
-    window.addEventListener('resize', this.mobileNav);
-  }
+
 
   render(){
-    const { handleShowPanel } = this.props;
+    const { show, links, mobileNav } = this.props;
+    // const { mobileNav } = this.state;
+    if(mobileNav){
+      return <ToggleMenu handleShowPanel={this.handleShowPanel} active />
+    }
     return(
-      <nav>
-        {
-          this.state.mobileNav ?
-            <ToggleMenu handleShowPanel={handleShowPanel} active /> :
-            <ul>
-              <Brand path='home' brandName='Cristian Florea' />
-              <ItemList />
-              <SocialLinks  links={this.props.links} />
-            </ul>
-        }
-      </nav>
+      <Nav show={show}>
+        <ul>
+          <Brand path='home' brandName='Cristian Florea' />
+          <ItemList />
+          <SocialLinks links={links} />
+        </ul>
+      </Nav>
     )
   }
 }
