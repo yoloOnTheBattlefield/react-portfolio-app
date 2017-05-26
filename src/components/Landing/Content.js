@@ -6,7 +6,7 @@ import About from '../About/About';
 
 const Content = () => {
   return (
-    <Container id='content' style={{paddingTop: 60, marginTop: 120}}>
+    <Container id='content' style={{paddingTop: 60, marginTop: 0}}>
       <Code />
       <About />
     </Container>

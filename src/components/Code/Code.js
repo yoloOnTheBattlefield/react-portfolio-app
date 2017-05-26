@@ -24,6 +24,7 @@ export default class extends React.Component{
           onLeave={this.onLeave}
           topOffset={60}
         />
+      <h1>Code</h1>
         <Projects>
           <Project />
           <Project />

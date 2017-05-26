@@ -1,5 +1,5 @@
 import React from 'react';
-import { Icon } from 'semantic-ui-react';
+// import { Icon } from 'semantic-ui-react';
 import Waypoint from 'react-waypoint';
 import Scroll from 'react-scroll';
 // import { Parallax, Background } from 'react-parallax';
@@ -30,19 +30,19 @@ const HeroImage = styled.div`
 
 const ScrollDown = styled.div`
   position: absolute;
-  width: 1px;
+  width: 100vw;
   left: 0;
   right: 0;
   margin: auto;
-  height: 50px;
-  bottom: 0;
-  background: white;
+  height: 40px;
+  bottom: 10px;
+
   overflow: hidden;
   &:after{
-    background: black;
+    background: white;
     position: absolute;
     content: '';
-    width: 100%;
+    width: 1px;
     height: 100%;
     animation: icon 2s infinite ease-in-out;
   }
@@ -63,12 +63,12 @@ const Hero = ({ handleSetActive, onHeroEnter, onHeroLeave }) => {
           <div className='Landing__button' >
             <button className='button'>Let's work together</button>
             <Link
+
               to='content'
               smooth={true}
               duration={500}
               onSetActive={handleSetActive}>
-              {/*<Icon className='Landing__icon' name='angle double down' />*/}
-              <ScrollDown />
+                <ScrollDown />
             </Link>
           </div>
         </div>

@@ -4,7 +4,7 @@ import Waypoint from 'react-waypoint';
 
 
 const Container = styled.div`
-  min-height: 80vh;
+  min-height: 60vh;
   width: 100%;
   margin: 0 auto;
   display: flex;
@@ -13,24 +13,24 @@ const Container = styled.div`
 const Card = styled.div`
   width: 450px;
   height: 275px;
-  background: lime;
+  background: #4CE0D2;
   margin: auto;
   transform: ${props => props.hovered ? 'matrix(1.095, -0.095, 0.095, 1.095, 0, 0)' : 'matrix(1, 0, 0, 1, 0, 0)'};
   position: relative;
-  box-shadow: ${props => props.hovered ? '10px 10px 5px rgba(0,0,0,0.5)' : '10px, 0, 10px black'};
+  box-shadow: ${props => props.hovered ? '10px 10px 5px rgba(0,0,0,0.1)' : '10px, 0, 10px black'};
   transition: 0.2s cubic-bezier(0.58,-0.29, 0.84, 0.05);
 `;
 
 const Title = styled.h1`
   position: absolute;
+  color: #292F36;
+  font-size: 35px;
   top: 100px;
   bottom: 100px;
   right: 0;
-  transform: translatex(${props => props.hovered ? '50px' : '30px' }) scale(${props => props.hovered ? '1.2' : '1' }) rotate(${props => props.hovered ? '5deg' : '0deg' });
+  transform: translatex(${props => props.hovered ? '60px' : '30px' }) scale(${props => props.hovered ? '1.1' : '0.8' }) rotate(${props => props.hovered ? '5deg' : '0deg' });
   height: 50px;
-  background: purple;
   transition: 0.2s cubic-bezier(0.58,-0.29, 0.84, 0.05);
-  box-shadow: ${props => props.hovered ? '10px 10px 5px rgba(0,0,0,0.5)' : '10px, 0, 10px black'};
 `;
 
 const Wrapper = styled.div`
@@ -51,7 +51,7 @@ const Link = styled.a`
   bottom: 0;
   margin: auto;
   height: 35px;
-  transform: translate(${props => props.hovered ? '50%' : '-100%' }) rotate(${props => props.hovered ? '5deg' : '0deg' });
+  transform: translate(${props => props.hovered ? '40%' : '-100%' }) rotate(${props => props.hovered ? '5deg' : '0deg' });
   transition: 0.3s cubic-bezier(0.58,-0.29, 0.84, 0.05);
 
 `;
@@ -80,12 +80,12 @@ class Project extends React.Component {
 
     return(
       <Container>
-
         <Card
           onMouseOver={this.handleMouseOver}
           onMouseOut={this.handleMouseOver}
           hovered={onMouseOver}
         >
+          <Waypoint topOffset={0} onEnter={() => console.log('card entered')} />
           <Title hovered={onMouseOver} >Project # 1</Title>
           <Wrapper>
             <Link hovered={onMouseOver} >Call to action</Link>
