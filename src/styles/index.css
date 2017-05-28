@@ -85,28 +85,11 @@ a {
 .Landing__button button:hover {
   border-color: #4B88A2; }
 
-.Landing__button .Landing__icon {
-  color: #EFE9F4;
-  font-size: 30px;
-  animation: icon 2s infinite ease-in-out;
-  margin: 0 auto;
-  cursor: pointer; }
-
 .Landing__social {
   margin-top: 20px; }
 
 .Landing__social a span {
   font-size: 30px; }
-
-@keyframes icon {
-  0% {
-    transform: translatey(-100%);
-    opacity: 1; }
-  75% {
-    opacity: 1; }
-  100% {
-    opacity: 0;
-    transform: translatey(100%); } }
 
 .Content {
   padding: 60px 20px !important; }

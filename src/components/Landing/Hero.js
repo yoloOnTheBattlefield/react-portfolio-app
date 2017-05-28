@@ -3,7 +3,7 @@ import React from 'react';
 import Waypoint from 'react-waypoint';
 import Scroll from 'react-scroll';
 // import { Parallax, Background } from 'react-parallax';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
 import SocialLinks from '../SocialLinks';
 
@@ -27,6 +27,19 @@ const HeroImage = styled.div`
   min-height: 100vh;
 `;
 
+const icon = keyframes`
+  0%{
+    transform: translatey(-100%);
+    opacity: 1;
+  }
+  75%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+    transform: translatey(100%);
+  }
+`;
 
 const ScrollDown = styled.div`
   position: absolute;
@@ -44,9 +57,11 @@ const ScrollDown = styled.div`
     content: '';
     width: 1px;
     height: 100%;
-    animation: icon 2s infinite ease-in-out;
+    animation: ${icon} 2s infinite ease-in-out;
   }
 `;
+
+
 
 const Hero = ({ handleSetActive, onHeroEnter, onHeroLeave }) => {
 

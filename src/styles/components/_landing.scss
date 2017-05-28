@@ -69,13 +69,7 @@ $black: #0D090A;
       border-color: #4B88A2;
     }
   }
-  .Landing__icon{
-    color: $color;
-    font-size: 30px;
-    animation: icon 2s infinite ease-in-out;
-    margin: 0 auto;
-    cursor: pointer;
-  }
+
 }
 
 .Landing__social{
@@ -87,19 +81,6 @@ $black: #0D090A;
   }
 }
 
-@keyframes icon {
-  0%{
-    transform: translatey(-100%);
-    opacity: 1;
-  }
-  75%{
-    opacity: 1;
-  }
-  100%{
-    opacity: 0;
-    transform: translatey(100%);
-  }
-}
 
 
 //Hero Styles
