@@ -1,6 +1,6 @@
 import React from 'react';
 import Waypoint from 'react-waypoint';
-import {  Code } from './Code.style';
+import {  Code, Title } from './Code.style';
 import Project from './Project';
 import Projects from './Projects';
 
@@ -24,7 +24,7 @@ export default class extends React.Component{
           onLeave={this.onLeave}
           topOffset={60}
         />
-      <h1>Code</h1>
+      <Title>Code</Title>
         <Projects>
           <Project />
           <Project />

@@ -74,22 +74,19 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: space-between; }
-
-.Landing__button button {
-  margin: 50px auto;
-  background: rgba(255, 255, 255, 0);
-  border: 1px solid #EFE9F4;
-  color: #EFE9F4;
-  transition: 0.2s; }
-
-.Landing__button button:hover {
-  border-color: #4B88A2; }
+  .Landing__button button {
+    margin: 50px auto;
+    background: rgba(255, 255, 255, 0);
+    border: 1px solid #EFE9F4;
+    color: #EFE9F4;
+    transition: 0.2s; }
+    .Landing__button button:hover {
+      border-color: #4B88A2; }
 
 .Landing__social {
   margin-top: 20px; }
-
-.Landing__social a span {
-  font-size: 30px; }
+  .Landing__social a span {
+    font-size: 30px; }
 
 .Content {
   padding: 60px 20px !important; }

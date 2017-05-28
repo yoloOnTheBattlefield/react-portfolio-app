@@ -11,4 +11,10 @@ export const Code = styled.div`
 
 export const Title = styled.h2`
   color: ${white}
+  position: absolute;
+  font-size: 100px;
+  left: 0;
+  color: #999;
+  z-index: 0;
+  top: -120px;
 `;
