@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 const height = '60px';
 const color = 'white';
-const backgroundColor = '#0D090A';
+const backgroundColor = '#211F1F';
 
 //add transition in the render    mothafukkaaa
 
@@ -13,7 +13,7 @@ export const Nav = styled.nav`
   position: fixed;
   margin: 0;
   z-index: 100;
-  background: #111;
+  background: ${backgroundColor};
   transform: ${props => props.show ? 'translatey(0) ' : `translatey(-${height})`};
   transition: 0.5s cubic-bezier(0.05, 1, 0.54, 1);
   ul{
